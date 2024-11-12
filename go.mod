@@ -1,6 +1,6 @@
 module github.com/matkv/zj-alias
 
-go 1.23.2
+go 1.22.9
 
 require (
 	github.com/sblinch/kdl-go v0.0.0-20240108033718-e453df3dbf65 // indirect

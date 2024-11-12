@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 
 	"gitlab.com/scabala/zelligo"
 )
@@ -28,14 +27,7 @@ func (p *Plugin) Pipe(message zelligo.PipeMessage) (bool, error) {
 
 // Render implements zelligo.ZellijPlugin.
 func (p *Plugin) Render(rows uint32, cols uint32) error {
-	// Create a padding to push text towards the bottom
-	padding := strings.Repeat("\n", int(rows)-2) // Adjust based on desired position
-	message := "Hello, World!"
-
-	// Right-align the message within the available width
-	padding += fmt.Sprintf("%*s\n", cols-1, message)
-	fmt.Print(padding)
-
+	fmt.Println("Hello from Render")
 	return nil
 }
 
